@@ -1,205 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nigel's Command Center</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- ==================================
+     HERO
+================================== -->
 
-<section class="hero">
+<section class="hero" id="hero">
 
-<div class="hero-overlay"></div>
+    <div class="hero-overlay"></div>
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<div class="hero-icon">🏦</div>
+        <h1>Nigel's Command Center</h1>
 
-<h1>Nigel's Command Center</h1>
+        <div id="greeting"></div>
 
-<p>
-Solution Architect • Digital Transformation • Azure Innovation
-</p>
+        <p>
+            Solution Architect • Digital Transformation • Azure Innovation
+        </p>
 
-<div id="clock"></div>
+        <div id="clock"></div>
 
-<a href="#weather" class="btn">
-Enter Command Center
-</a>
+        <div class="hero-actions">
 
-</div>
+            <a href="#weather" class="hero-btn">
+                View Intelligence
+            </a>
+
+        </div>
+
+        <div class="theme-selector">
+
+            <button onclick="setHeroTheme('morning')">
+                🌅 Morning
+            </button>
+
+            <button onclick="setHeroTheme('afternoon')">
+                ☀ Afternoon
+            </button>
+
+            <button onclick="setHeroTheme('evening')">
+                🌙 Evening
+            </button>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- WEATHER -->
+<!-- ==================================
+     WEATHER INTELLIGENCE
+================================== -->
 
 <section id="weather">
 
-<h2>☀ Weather Intelligence</h2>
+    <h2>🌦 Weather Intelligence</h2>
 
-<div class="grid">
+    <div class="weather-top-grid">
 
-<div class="card weather-card" id="puchong">
-Loading...
-</div>
+        <!-- Riding Advisory -->
 
-<div class="card weather-card" id="kl">
-Loading...
-</div>
+        <div class="advisory-card">
 
-<div class="card weather-card" id="selangor">
-Loading...
-</div>
+            <div class="advisory-header">
+                🎯 Riding Advisory
+            </div>
 
-<div class="card weather-card" id="klang">
-Loading...
-</div>
+            <div id="recommendation">
+                Analysing weather...
+            </div>
 
-</div>
+        </div>
+
+        <!-- Today's Conditions -->
+
+        <div class="conditions-card">
+
+            <div class="conditions-header">
+                📋 Today's Conditions
+            </div>
+
+            <div id="todayConditions">
+
+                Loading conditions...
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Location Weather Cards -->
+
+    <div class="weather-grid">
+
+        <div class="weather-location-card" id="puchong">
+            Loading...
+        </div>
+
+        <div class="weather-location-card" id="kl">
+            Loading...
+        </div>
+
+        <div class="weather-location-card" id="klang">
+            Loading...
+        </div>
+
+        <div class="weather-location-card" id="shahalam">
+            Loading...
+        </div>
+
+    </div>
 
 </section>
 
-<!-- TRAFFIC -->
+<!-- ==================================
+     COMMUTE INTELLIGENCE
+================================== -->
 
 <section>
 
-<h2>🚗 Traffic Intelligence</h2>
+    <h2>🏍 Commute Intelligence</h2>
 
-<div class="grid">
+    <div class="commute-grid">
 
-<a class="card traffic" href="https://www.google.com/maps/search/?api=1&query=Puchong" target="_blank">
-Puchong
-<span>Open Live Traffic</span>
-</a>
+        <div class="commute-card">
 
-<a class="card traffic" href="https://www.google.com/maps/search/?api=1&query=Kuala+Lumpur" target="_blank">
-Kuala Lumpur
-<span>Open Live Traffic</span>
-</a>
+            <div class="commute-header">
+                🚦 Commute Recommendation
+            </div>
 
-<a class="card traffic" href="https://www.google.com/maps/search/?api=1&query=Klang" target="_blank">
-Klang
-<span>Open Live Traffic</span>
-</a>
+            <div id="commuteRecommendation">
 
-<a class="card traffic" href="https://www.google.com/maps/search/?api=1&query=Selangor" target="_blank">
-Selangor
-<span>Open Live Traffic</span>
-</a>
+                Analysing commute...
 
-</div>
+            </div>
+
+        </div>
+
+        <div class="radar-card">
+
+            <div class="radar-header">
+                🌧 Klang Valley Rain Radar
+            </div>
+
+            <div class="radar-placeholder">
+
+                <div class="radar-icon">
+                    🌦
+                </div>
+
+                <p>
+                    Live radar integration coming soon.
+                </p>
+
+                <small>
+                    Planned Integration:
+                    RainViewer / Windy / Zoom Earth
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- QUICK LINKS -->
+<!-- ==================================
+     BANKING & TECHNOLOGY RADAR
+================================== -->
 
 <section>
 
-<h2>⚡ Quick Access</h2>
+    <h2>📰 Banking & Technology Radar</h2>
 
-<div class="grid">
+    <div class="news-container">
 
-<a class="card quicklink">Azure Portal</a>
-<a class="card quicklink">GitHub</a>
-<a class="card quicklink">JIRA</a>
-<a class="card quicklink">Confluence</a>
+        <!-- Banking -->
 
-</div>
+        <div class="news-card">
+
+            <h3>🏦 Banking</h3>
+
+            <div id="bankingNews">
+
+                Loading banking news...
+
+            </div>
+
+        </div>
+
+        <!-- Technology -->
+
+        <div class="news-card">
+
+            <h3>💻 Technology</h3>
+
+            <div id="techNews">
+
+                Loading technology news...
+
+            </div>
+
+        </div>
+
+        <!-- AI -->
+
+        <div class="news-card">
+
+            <h3>🤖 AI</h3>
+
+            <div id="aiNews">
+
+                Loading AI news...
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- CURRENT MISSIONS -->
+<!-- ==================================
+     ARCHITECTURE INSIGHT
+================================== -->
 
 <section>
 
-<h2>🎯 Current Missions</h2>
+    <h2>💡 Architecture Insight</h2>
 
-<div class="mission-card">
+    <div class="quote-card">
 
-<div class="mission">
-Azure Document Intelligence
-<div class="bar">
-<div class="fill" style="width:90%"></div>
-</div>
-</div>
+        <div id="quote">
+            Loading insight...
+        </div>
 
-<div class="mission">
-Digital Acquisition
-<div class="bar">
-<div class="fill" style="width:75%"></div>
-</div>
-</div>
-
-<div class="mission">
-Architecture Guild
-<div class="bar">
-<div class="fill" style="width:80%"></div>
-</div>
-</div>
-
-<div class="mission">
-Middleware Modernisation
-<div class="bar">
-<div class="fill" style="width:65%"></div>
-</div>
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- GARAGE -->
-
-<section>
-
-<h2>🏍 Garage</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Suzuki DL650</h3>
-
-<p>Next Service:</p>
-
-<strong>1,000 km remaining</strong>
-
-</div>
-
-<div class="card">
-
-<h3>Proton Satria GTi</h3>
-
-<p>Recent Upgrades:</p>
-
-<strong>TRW + HARDRACE</strong>
-
-</div>
-
-</div>
-
-</section>
+<!-- ==================================
+     FOOTER
+================================== -->
 
 <footer>
 
-<p id="greeting"></p>
+    <div>
+        Nigel's Command Center
+    </div>
 
-<p>
-© 2026 Nigel's Command Center
-</p>
+    <div class="footer-subtitle">
+
+        Weather • Intelligence • Architecture
+
+    </div>
 
 </footer>
 
 <script src="app.js"></script>
 
 </body>
+
 </html>

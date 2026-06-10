@@ -1,4 +1,4 @@
-const apiKey = "YOUR_API_KEY";
+const apiKey = "914f5fdada61a092fb10fb8414f2da01";
 
 const locations = [
 {
